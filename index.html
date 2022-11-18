@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="insta-style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://randojs.com/1.0.0.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>Home Page</title>
+  </head>
+
+  <body>
+    <div class="body-container">
+      <!-- header -->
+      <header class="mt-4">
+        <div class="container">
+          <img
+            src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"
+            alt="instagram"
+            width="120rem"
+          />
+
+          <nav>
+            <i class="material-icons">add_circle_outline</i>
+            <i class="material-icons">favorite_border</i>
+            <i class="material-icons" id="send-icon">send</i>
+            <button onclick="darkMode()">Dark</button>
+          </nav>
+        </div>
+      </header>
+
+      <!-- story container -->
+      <div id="story" class="mt-2">
+        <div class="circle-container">
+          <div class="circle">
+            <input type="checkbox" class="checkbox" />
+            <img src="" class="profile-img" alt="profile-img" />
+            <div class="username">username</div>
+          </div>
+          <div class="circle">
+            <input type="checkbox" class="checkbox" />
+            <img src="" class="profile-img" alt="profile-img" />
+            <div class="username">username</div>
+          </div>
+          <div class="circle">
+            <input type="checkbox" class="checkbox" />
+            <img src="" class="profile-img" alt="profile-img" />
+            <div class="username">username</div>
+          </div>
+          <div class="circle">
+            <input type="checkbox" class="checkbox" />
+            <img src="" class="profile-img" alt="profile-img" />
+            <div class="username">username</div>
+          </div>
+          <div class="circle">
+            <!-- <input type="checkbox" class="checkbox" /> -->
+            <img src="" class="profile-img" alt="profile-img" />
+            <div class="username">username</div>
+          </div>
+          <div class="circle">
+            <!-- <input type="checkbox" class="checkbox" /> -->
+            <img src="" class="profile-img" alt="profile-img" />
+            <div class="username">username</div>
+          </div>
+          <div class="circle">
+            <!-- <input type="checkbox" class="checkbox" /> -->
+            <img src="" class="profile-img" alt="profile-img" />
+            <div class="username">username</div>
+          </div>
+          <div class="circle">
+            <!-- <input type="checkbox" class="checkbox" /> -->
+            <img src="" class="profile-img" alt="profile-img" />
+            <div class="username">username</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- open-story -->
+      <div class="open-story">
+        <div class="head-story">
+          <div class="user-open-story">
+            <img src="" class="story-profile-img" alt="profile-img" />
+            <span>username</span>
+          </div>
+
+          <div class="navigation-story">
+            <i class="material-icons" id="more-icon">more_horiz</i>
+            <i class="material-icons close-story-button" id="more-icon"
+              >close</i
+            >
+          </div>
+        </div>
+
+        <img
+          class="img-story"
+          src="https://source.unsplash.com/user/c_v_r/600x600"
+        />
+
+        <div class="open-story-footer">
+          <button class="story-send-message">Send message</button>
+          <i class="material-icons">favorite_border</i>
+        </div>
+      </div>
+      <!-- END-open-story -->
+
+      <!-- MAIN -->
+      <main>
+        <div class="card mb-2">
+          <div class="card-header">
+            <div class="user-data">
+              <img class="user-img profile-img" alt="profile-img" />
+              <div class="user">Username</div>
+            </div>
+            <i class="material-icons" id="more-icon">more_horiz</i>
+          </div>
+          <div class="card-body p-0">
+            <img
+              class="post"
+              src="https://source.unsplash.com/user/c_v_r/400x399"
+            />
+          </div>
+          <div class="post-content">
+            <nav class="social-post">
+              <div class="left-icons">
+                <i class="material-icons">favorite_border</i>
+                <i class="material-icons" class="social-icons"
+                  >chat_bubble_outline</i
+                >
+                <i class="material-icons" class="social-icons">call_made</i>
+              </div>
+              <i class="material-icons" id="save-icon">turned_in_not</i>
+            </nav>
+            <p class="likes"></p>
+            <p class="description">
+              <span>username </span> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Pariatur tenetur veritatis placeat
+            </p>
+            <p class="post-time">2 minutes ago</p>
+          </div>
+        </div>
+
+        <div class="card mb-2">
+          <div class="card-header">
+            <div class="user-data">
+              <img class="user-img profile-img" alt="profile-img" />
+              <div class="user">Username</div>
+            </div>
+            <i class="material-icons" id="more-icon">more_horiz</i>
+          </div>
+          <div class="card-body p-0">
+            <img
+              class="post"
+              src="https://source.unsplash.com/user/c_v_r/400x400"
+            />
+          </div>
+          <div class="post-content">
+            <nav class="social-post">
+              <div class="left-icons">
+                <i class="material-icons">favorite_border</i>
+                <i class="material-icons" class="social-icons"
+                  >chat_bubble_outline</i
+                >
+                <i class="material-icons" class="social-icons">call_made</i>
+              </div>
+              <i class="material-icons" id="save-icon">turned_in_not</i>
+            </nav>
+            <p class="likes"></p>
+            <p class="description">
+              <span>username </span> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Pariatur tenetur veritatis placeat
+            </p>
+            <p class="post-time">2 minutes ago</p>
+          </div>
+        </div>
+
+        <div class="card mb-2">
+          <div class="card-header">
+            <div class="user-data">
+              <img class="user-img profile-img" alt="profile-img" />
+              <div class="user">Username</div>
+            </div>
+            <i class="material-icons" id="more-icon">more_horiz</i>
+          </div>
+          <div class="card-body p-0">
+            <img
+              class="post"
+              src="https://source.unsplash.com/user/c_v_r/225x225"
+            />
+          </div>
+          <div class="post-content">
+            <nav class="social-post">
+              <div class="left-icons">
+                <i class="material-icons">favorite_border</i>
+                <i class="material-icons" class="social-icons"
+                  >chat_bubble_outline</i
+                >
+                <i class="material-icons" class="social-icons">call_made</i>
+              </div>
+              <i class="material-icons" id="save-icon">turned_in_not</i>
+            </nav>
+            <p class="likes"></p>
+            <p class="description">
+              <span>username </span> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Pariatur tenetur veritatis placeat
+            </p>
+            <p class="post-time">2 minutes ago</p>
+          </div>
+        </div>
+
+        <div class="card mb-2">
+          <div class="card-header">
+            <div class="user-data">
+              <img class="user-img profile-img" alt="profile-img" />
+              <div class="user">Username</div>
+            </div>
+            <i class="material-icons" id="more-icon">more_horiz</i>
+          </div>
+          <div class="card-body p-0">
+            <img
+              class="post"
+              src="https://source.unsplash.com/user/c_v_r/399x399"
+            />
+          </div>
+          <div class="post-content">
+            <nav class="social-post">
+              <div class="left-icons">
+                <i class="material-icons">favorite_border</i>
+                <i class="material-icons" class="social-icons"
+                  >chat_bubble_outline</i
+                >
+                <i class="material-icons" class="social-icons">call_made</i>
+              </div>
+              <i class="material-icons" id="save-icon">turned_in_not</i>
+            </nav>
+            <p class="likes"></p>
+            <p class="description">
+              <span>username </span> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Pariatur tenetur veritatis placeat
+            </p>
+            <p class="post-time">2 minutes ago</p>
+          </div>
+        </div>
+
+        <div class="card mb-2">
+          <div class="card-header">
+            <div class="user-data">
+              <img class="user-img profile-img" alt="profile-img" />
+              <div class="user">Username</div>
+            </div>
+            <i class="material-icons" id="more-icon">more_horiz</i>
+          </div>
+          <div class="card-body p-0">
+            <img
+              class="post"
+              src="https://source.unsplash.com/user/c_v_r/399x400"
+            />
+          </div>
+          <div class="post-content">
+            <nav class="social-post">
+              <div class="left-icons">
+                <i class="material-icons">favorite_border</i>
+                <i class="material-icons" class="social-icons"
+                  >chat_bubble_outline</i
+                >
+                <i class="material-icons" class="social-icons">call_made</i>
+              </div>
+              <i class="material-icons" id="save-icon">turned_in_not</i>
+            </nav>
+            <p class="likes"></p>
+            <p class="description">
+              <span>username </span> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Pariatur tenetur veritatis placeat
+            </p>
+            <p class="post-time">2 minutes ago</p>
+          </div>
+        </div>
+
+        <div class="card mb-2">
+          <div class="card-header">
+            <div class="user-data">
+              <img class="user-img profile-img" alt="profile-img" />
+              <div class="user">Username</div>
+            </div>
+            <i class="material-icons" id="more-icon">more_horiz</i>
+          </div>
+          <div class="card-body p-0">
+            <img
+              class="post"
+              src="https://source.unsplash.com/user/c_v_r/400x401"
+            />
+          </div>
+          <div class="post-content">
+            <nav class="social-post">
+              <div class="left-icons">
+                <i class="material-icons">favorite_border</i>
+                <i class="material-icons" class="social-icons"
+                  >chat_bubble_outline</i
+                >
+                <i class="material-icons" class="social-icons">call_made</i>
+              </div>
+              <i class="material-icons" id="save-icon">turned_in_not</i>
+            </nav>
+            <p class="likes" id="likes"></p>
+            <p class="description">
+              <span>username </span> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Pariatur tenetur veritatis placeat
+            </p>
+            <p class="post-time">2 minutes ago</p>
+          </div>
+        </div>
+
+        <div class="card mb-2">
+          <div class="card-header">
+            <div class="user-data">
+              <img class="user-img profile-img" alt="profile-img" />
+              <div class="user">Username</div>
+            </div>
+            <i class="material-icons" id="more-icon">more_horiz</i>
+          </div>
+          <div class="card-body p-0">
+            <img
+              class="post"
+              src="https://source.unsplash.com/user/c_v_r/401x401"
+            />
+          </div>
+          <div class="post-content">
+            <nav class="social-post">
+              <div class="left-icons">
+                <i class="material-icons">favorite_border</i>
+                <i class="material-icons" class="social-icons"
+                  >chat_bubble_outline</i
+                >
+                <i class="material-icons" class="social-icons">call_made</i>
+              </div>
+              <i class="material-icons" id="save-icon">turned_in_not</i>
+            </nav>
+            <p class="likes" id="likes"></p>
+            <p class="description">
+              <span>username </span> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Pariatur tenetur veritatis placeat
+            </p>
+            <p class="post-time">2 minutes ago</p>
+          </div>
+        </div>
+
+        <div class="card mb-2">
+          <div class="card-header">
+            <div class="user-data">
+              <img class="user-img profile-img" alt="profile-img" />
+              <div class="user">Username</div>
+            </div>
+            <i class="material-icons" id="more-icon">more_horiz</i>
+          </div>
+          <div class="card-body p-0">
+            <img
+              class="post"
+              src="https://source.unsplash.com/user/c_v_r/399x401"
+            />
+          </div>
+          <div class="post-content">
+            <nav class="social-post">
+              <div class="left-icons">
+                <i class="material-icons">favorite_border</i>
+                <i class="material-icons" class="social-icons"
+                  >chat_bubble_outline</i
+                >
+                <i class="material-icons" class="social-icons">call_made</i>
+              </div>
+              <i class="material-icons" id="save-icon">turned_in_not</i>
+            </nav>
+            <p class="likes" id="likes"></p>
+            <p class="description">
+              <span>username </span> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Pariatur tenetur veritatis placeat
+            </p>
+            <p class="post-time">2 minutes ago</p>
+          </div>
+        </div>
+
+        <div class="container-menu">
+          <nav class="menu">
+            <i class="material-icons">home</i>
+            <i class="material-icons" class="social-icons">search</i>
+            <i class="material-icons" class="social-icons">ondemand_video</i>
+            <i class="material-icons" class="social-icons">shop</i>
+            <i class="material-icons" class="social-icons">account_circle</i>
+          </nav>
+        </div>
+      </main>
+
+      <script src="insta.js"></script>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
