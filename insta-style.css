@@ -12,6 +12,11 @@
   --story-primary: rgb(230, 196, 48);
   --story-secondary: rgb(230, 23, 137);
 
+  --story-bar-color0: rgba(88, 89, 104, 0.5);
+  --story-bar-color50: rgba(88, 89, 104, 0.5);
+  --story-bar-color51: rgba(255, 255, 255, 0.5);
+  --story-bar-color100: rgba(255, 255, 255, 0.5);
+
   --invert-color: none;
 }
 
@@ -22,12 +27,20 @@
   color: var(--bg-secondary);
   --hover-light: rgb(189, 189, 189);
   --invert-color: invert(1);
+  --story-bar-color0: rgba(255, 255, 255, 0.5);
+  --story-bar-color50: rgba(255, 255, 255, 0.5);
+  --story-bar-color51: rgba(88, 89, 104, 0.5);
+  --story-bar-color100: rgba(88, 89, 104, 0.5);
 }
 
 body {
   display: flex;
   flex-direction: column;
   color: var(--text-primary);
+  overflow: visible;
+}
+.stop-scrolling {
+  overflow-y: hidden;
 }
 
 .body-container {
@@ -35,6 +48,7 @@ body {
   min-width: 300px;
   margin: 0 auto;
   margin-top: -25px;
+  overflow: scroll;
   /* border: solid 1px #ececec; */
 }
 /* HEADER */
@@ -271,9 +285,10 @@ input[type="checkbox"] {
 
 .navigation-story,
 .user-open-story {
-  margin-top: 20px;
+  margin-top: 2px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .navigation-story .material-icons {
@@ -304,4 +319,54 @@ input[type="checkbox"] {
   color: var(--text-primary);
   border-radius: 20px;
   padding: 5px;
+}
+
+/* PROGRESS-BAR TEST */
+.progress-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 755px;
+  min-width: 300px;
+  bottom: 0;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.progress {
+  height: 3px !important;
+  flex-grow: 1;
+  border-radius: 4px;
+  margin: 0 5px;
+  display: flex;
+  background-image: -webkit-linear-gradient(
+    left,
+    var(--story-bar-color0) 0%,
+    var(--story-bar-color50) 50%,
+    var(--story-bar-color51) 50.001%,
+    var(--story-bar-color100) 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-color: #666;
+  background-position: 100% 50%;
+  animation-timing-function: linear;
+  animation-delay: 0.2s;
+}
+
+.progress.active {
+  animation-name: Loader;
+}
+
+/* .progress.passed {
+  background-position: 0 0;
+} */
+
+@-webkit-keyframes Loader {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

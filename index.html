@@ -90,6 +90,9 @@
 
       <!-- open-story -->
       <div class="open-story">
+        <div class="progress-container">
+          <div style="animation-duration: 5s" class="progress"></div>
+        </div>
         <div class="head-story">
           <div class="user-open-story">
             <img src="" class="story-profile-img" alt="profile-img" />
@@ -135,7 +138,7 @@
           <div class="post-content">
             <nav class="social-post">
               <div class="left-icons">
-                <i class="material-icons">favorite_border</i>
+                <i class="material-icons prefix">favorite_border</i>
                 <i class="material-icons" class="social-icons"
                   >chat_bubble_outline</i
                 >
@@ -408,6 +411,23 @@
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"
       ></script>
+
+      <!-- Hotjar Tracking Code for https://insta-clone-miki.netlify.app -->
+      <script>
+        (function (h, o, t, j, a, r) {
+          h.hj =
+            h.hj ||
+            function () {
+              (h.hj.q = h.hj.q || []).push(arguments);
+            };
+          h._hjSettings = { hjid: 3259579, hjsv: 6 };
+          a = o.getElementsByTagName("head")[0];
+          r = o.createElement("script");
+          r.async = 1;
+          r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+          a.appendChild(r);
+        })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+      </script>
     </div>
   </body>
 </html>
